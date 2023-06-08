@@ -7,18 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9888905F2A31D4380082E75A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9888905E2A31D4380082E75A /* HomeView.swift */; };
+		988890612A31EC010082E75A /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988890602A31EC010082E75A /* KeychainService.swift */; };
+		988890642A32038B0082E75A /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 988890632A32038B0082E75A /* JWTDecode */; };
 		98AEFA402A30EB4C00210B0F /* AuthSystemUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AEFA3F2A30EB4C00210B0F /* AuthSystemUIApp.swift */; };
 		98AEFA422A30EB4C00210B0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AEFA412A30EB4C00210B0F /* ContentView.swift */; };
 		98AEFA442A30EB4D00210B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98AEFA432A30EB4D00210B0F /* Assets.xcassets */; };
 		98AEFA472A30EB4D00210B0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98AEFA462A30EB4D00210B0F /* Preview Assets.xcassets */; };
+		98AEFA4F2A30EBA900210B0F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AEFA4E2A30EBA900210B0F /* LoginView.swift */; };
+		98AEFA512A30ECB500210B0F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AEFA502A30ECB500210B0F /* SignUpView.swift */; };
+		98AEFA532A31027F00210B0F /* LoginPromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AEFA522A31027F00210B0F /* LoginPromoView.swift */; };
+		98AEFA562A31171100210B0F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AEFA552A31171100210B0F /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9888905E2A31D4380082E75A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		988890602A31EC010082E75A /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		98AEFA3C2A30EB4C00210B0F /* AuthSystemUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthSystemUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98AEFA3F2A30EB4C00210B0F /* AuthSystemUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSystemUIApp.swift; sourceTree = "<group>"; };
 		98AEFA412A30EB4C00210B0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		98AEFA432A30EB4D00210B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98AEFA462A30EB4D00210B0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		98AEFA4E2A30EBA900210B0F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		98AEFA502A30ECB500210B0F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		98AEFA522A31027F00210B0F /* LoginPromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPromoView.swift; sourceTree = "<group>"; };
+		98AEFA552A31171100210B0F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988890642A32038B0082E75A /* JWTDecode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +65,8 @@
 		98AEFA3E2A30EB4C00210B0F /* AuthSystemUI */ = {
 			isa = PBXGroup;
 			children = (
+				98AEFA542A3116C400210B0F /* Services */,
+				98AEFA4D2A30EB8600210B0F /* Views */,
 				98AEFA3F2A30EB4C00210B0F /* AuthSystemUIApp.swift */,
 				98AEFA412A30EB4C00210B0F /* ContentView.swift */,
 				98AEFA432A30EB4D00210B0F /* Assets.xcassets */,
@@ -65,6 +81,26 @@
 				98AEFA462A30EB4D00210B0F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		98AEFA4D2A30EB8600210B0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98AEFA4E2A30EBA900210B0F /* LoginView.swift */,
+				98AEFA502A30ECB500210B0F /* SignUpView.swift */,
+				98AEFA522A31027F00210B0F /* LoginPromoView.swift */,
+				9888905E2A31D4380082E75A /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98AEFA542A3116C400210B0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				98AEFA552A31171100210B0F /* APIService.swift */,
+				988890602A31EC010082E75A /* KeychainService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +119,9 @@
 			dependencies = (
 			);
 			name = AuthSystemUI;
+			packageProductDependencies = (
+				988890632A32038B0082E75A /* JWTDecode */,
+			);
 			productName = AuthSystemUI;
 			productReference = 98AEFA3C2A30EB4C00210B0F /* AuthSystemUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 98AEFA332A30EB4C00210B0F;
+			packageReferences = (
+				988890622A32038B0082E75A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */,
+			);
 			productRefGroup = 98AEFA3D2A30EB4C00210B0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98AEFA512A30ECB500210B0F /* SignUpView.swift in Sources */,
+				9888905F2A31D4380082E75A /* HomeView.swift in Sources */,
+				98AEFA4F2A30EBA900210B0F /* LoginView.swift in Sources */,
 				98AEFA422A30EB4C00210B0F /* ContentView.swift in Sources */,
+				98AEFA532A31027F00210B0F /* LoginPromoView.swift in Sources */,
+				988890612A31EC010082E75A /* KeychainService.swift in Sources */,
+				98AEFA562A31171100210B0F /* APIService.swift in Sources */,
 				98AEFA402A30EB4C00210B0F /* AuthSystemUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		988890622A32038B0082E75A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		988890632A32038B0082E75A /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 988890622A32038B0082E75A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */;
+			productName = JWTDecode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98AEFA342A30EB4C00210B0F /* Project object */;
 }
