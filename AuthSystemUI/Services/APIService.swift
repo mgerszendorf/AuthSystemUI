@@ -102,13 +102,13 @@ class APIService: ObservableObject {
     }
     
     func logout(completion: @escaping (Result<Bool, Error>) -> Void) {
-        let keychain = KeychainService(service: "com.TwojeImie.PortfolioApp")
-        keychain.delete(key: "accessToken")
-        keychain.delete(key: "refreshToken")
-        completion(.success(true))
-    }
-    
-    func requestEndpoint(accessToken: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        let keychain = KeychainService(service: "com.Marek.AuthSystemUI")
+        
+        guard let accessToken = keychain.load(key: "accessToken") else {
+            completion(.failure(NSError(domain: "", code: 400, userInfo: [NSLocalizedDescriptionKey : "No access token found"])))
+            return
+        }
+        
         guard let url = baseURL?.appendingPathComponent("/accounts/logout") else {
             completion(.failure(NSError(domain: "", code: 400, userInfo: [NSLocalizedDescriptionKey : "Invalid endpoint URL"])))
             return
@@ -124,7 +124,7 @@ class APIService: ObservableObject {
                 return
             }
             
-            guard let httpResponse = response as? HTTPURLResponse, let data = data else {
+            guard let httpResponse = response as? HTTPURLResponse, let _ = data else {
                 completion(.failure(NSError(domain: "", code: 500, userInfo: [NSLocalizedDescriptionKey : "Request failed"])))
                 return
             }
@@ -134,7 +134,10 @@ class APIService: ObservableObject {
                 return
             }
             
-            completion(.success(data))
+            keychain.delete(key: "accessToken")
+            keychain.delete(key: "refreshToken")
+            
+            completion(.success(true))
         }
         
         task.resume()
